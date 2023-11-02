@@ -1,7 +1,13 @@
 package edu.utfpr;
 
-public class ProfessorSubstituto implements Professor{
+/**
+ * Proxy para Professor Efetivo de POO.
+ *
+ * @author Daniel Fonseca <danielfonseca@alunos.utfpr.edu.br>
+ */
+public class ProfessorSubstituto implements Professor {
     private final String nome;
+    private final Professor professor = new ProfessorEfetivo("João");
 
     public ProfessorSubstituto(String nome) {
         this.nome = nome;
@@ -9,8 +15,10 @@ public class ProfessorSubstituto implements Professor{
 
     @Override
     public void lecionar(String disciplina) {
-        System.out.println("Estudando material do professor efetivo");
-        System.out.println("Professor substituto " + this.nome + " lecionando " + disciplina);
-        System.out.println("Reportando progresso da turma de " + disciplina + " para o professor efetivo");
+        if (disciplina.equals("POO")) {
+            System.out.println("Professor substituto " + nome + " lecionando " + disciplina);
+        } else {
+            professor.lecionar(disciplina);
+        }
     }
 }

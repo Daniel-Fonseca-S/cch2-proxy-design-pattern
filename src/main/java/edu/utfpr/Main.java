@@ -1,12 +1,14 @@
 package edu.utfpr;
 
+/**
+ * Aplicação para exemplificar o padrão Proxy.
+ *
+ * @author Daniel Fonseca <danielfonseca@alunos.utfpr.edu.br>
+ */
 public class Main {
     public static void main(String[] args) {
-        Professor professorEfetivo = new ProfessorEfetivo("João");
-        Professor professorSubstituto = new ProfessorSubstituto("Maria");
-
-        professorEfetivo.lecionar("Arquitetura de Software");
-        System.out.println();
-        professorSubstituto.lecionar("Arquitetura de Software");
+        Professor professor = new ProfessorSubstituto("José");
+        professor.lecionar("POO");
+        professor.lecionar("Cálculo");
     }
 }

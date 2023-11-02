@@ -1,6 +1,11 @@
 package edu.utfpr;
 
-public class ProfessorEfetivo implements Professor{
+/**
+ * Professor Efetivo para uma disciplina qualquer.
+ *
+ * @author Daniel Fonseca <danielfonseca@alunos.utfpr.edu.br>
+ */
+public class ProfessorEfetivo implements Professor {
     private final String nome;
 
     public ProfessorEfetivo(String nome) {
