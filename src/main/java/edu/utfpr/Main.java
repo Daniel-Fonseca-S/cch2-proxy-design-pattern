@@ -5,8 +5,8 @@ public class Main {
         Professor professorEfetivo = new ProfessorEfetivo("João");
         Professor professorSubstituto = new ProfessorSubstituto("Maria");
 
-        professorEfetivo.lecionar("POO");
+        professorEfetivo.lecionar("Arquitetura de Software");
         System.out.println();
-        professorSubstituto.lecionar("POO");
+        professorSubstituto.lecionar("Arquitetura de Software");
     }
 }
